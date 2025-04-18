@@ -1,0 +1,1 @@
+The ProtT5-encoder weight files should be downloaded from the Hugging Face Model Hub (https://huggingface.co/Rostlab/prot_t5_xl_uniref50) and manually placed into the designated directory of this repository. Ensure compliance with the licensing terms specified on the Hugging Face platform during usage.
