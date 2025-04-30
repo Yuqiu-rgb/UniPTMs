@@ -1,3 +1,9 @@
+"""
+@author: linyiyu
+"""
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
 class HierarchicalDynamicWeightedFusion(nn.Module):
     def __init__(self, dim=1024, num_heads=8, expansion_ratio=2, dropout=0.1):
         super().__init__()
