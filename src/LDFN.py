@@ -5,7 +5,7 @@ import torch.nn.functional as F
 @author: linyiyu
 """
 class LDFusion(nn.Module):
-    def __init__(self, dim1=256, dim2=256, hidden_dim=128, output_dim=512):#dim1,dim2,output_dim can change for you need.it can be 512 or other!
+    def __init__(self, dim1=164, dim2=30, hidden_dim=256, output_dim=512):#dim1,dim2,output_dim can change for you need.
         super().__init__()
         
         # 维度对齐投影
