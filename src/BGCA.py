@@ -7,7 +7,7 @@ from einops import rearrange, repeat
 this file is under testing
 """
 class EnhancedBGCA(nn.Module):
-    def __init__(self, dim1=1024, dim2=1280, hidden_dim=512, groups=8, output_dim=1280):
+    def __init__(self, dim1=1024, dim2=1280, hidden_dim=512, groups=8, output_dim=1024):
         super().__init__()
         # 分组投影参数
         self.groups = groups
