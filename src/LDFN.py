@@ -3,9 +3,10 @@ import torch.nn as nn
 import torch.nn.functional as F
 """
 @author: linyiyu
+this file is under testing
 """
 class LDFusion(nn.Module):
-    def __init__(self, dim1=164, dim2=30, hidden_dim=256, output_dim=512):#dim1,dim2,output_dim can change for you need.
+    def __init__(self, dim1=164, dim2=30, hidden_dim=256, output_dim=512): # dim1,dim2,output_dim can be changed for you need.
         super().__init__()
         
         # 维度对齐投影
