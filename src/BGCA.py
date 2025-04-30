@@ -2,7 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from einops import rearrange, repeat
-
+"""
+@author: linyiyu
+"""
 class EnhancedBGCA(nn.Module):
     def __init__(self, dim1=1024, dim2=1280, hidden_dim=512, groups=8, output_dim=1280):
         super().__init__()
