@@ -26,7 +26,7 @@ class DynamicConv1D(nn.Module):
         return x.transpose(1, 2)  # [B, L, D]
 
 class BHGFN(nn.Module):
-    def __init__(self, d_model=1024, d_aux=256, n_heads=8):  #d_aux can be changed (up to stage,it can be 256,512,1024,here 256 is a test dim for readers)
+    def __init__(self, d_model=1024, d_aux=256, n_heads=8):  #d_aux can be changed (up to stage,it can be 512,1024,here 256 is a test dim for readers)
         super().__init__()
         # 第一阶段：主->辅助特征交互
         self.cross_attn1 = nn.MultiheadAttention(d_model, n_heads, batch_first=True)
