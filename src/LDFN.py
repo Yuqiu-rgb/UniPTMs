@@ -1,9 +1,11 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-
+"""
+@author: linyiyu
+"""
 class LDFusion(nn.Module):
-    def __init__(self, dim1=164, dim2=30, hidden_dim=128, output_dim=164):
+    def __init__(self, dim1, dim2, hidden_dim=128, output_dim):
         super().__init__()
         
         # 维度对齐投影
@@ -47,12 +49,12 @@ class LDFusion(nn.Module):
 
     def forward(self, x1, x2):
         """
-        x1: EMBER2嵌入 [batch, seq_len, 164]
-        x2: PseAAC嵌入 [batch, seq_len, 30]
+        x1: EMBER2嵌入 
+        x2: PseAAC嵌入 
         """
         # 维度对齐
-        h1 = self.proj1(x1)  # [B, L, 128]
-        h2 = self.proj2(x2)  # [B, L, 128]
+        h1 = self.proj1(x1)  # [B, L, D]
+        h2 = self.proj2(x2)  # [B, L, D]
         
         # 交叉注意力计算
         Q1 = self.cross_attn['ember2q'](h1)  # EMBER2作为Query
